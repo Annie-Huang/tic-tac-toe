@@ -1,14 +1,15 @@
-import React from 'react';
+import React, {useState} from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 
 const Square = ({number}) => {
+    const [value, setValue] = useState('x');
     return (
         <button
             className="square"
             onClick={() => console.log('happy birthday react hooks')}
         >
-            {number}
+            {value}
         </button>
     );
 };
