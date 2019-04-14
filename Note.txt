@@ -6,7 +6,7 @@ https://codepen.io/gaearon/pen/oWWQNa
 https://reactjs.org/tutorial/tutorial.html
 https://reactjs.org/tutorial/tutorial.html#passing-data-through-props
 
-
+Final output when using the original class approach...
 https://codepen.io/gaearon/pen/gWWZgR?editors=0010
 
 Homework:
