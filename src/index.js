@@ -14,14 +14,12 @@ const Square = ({value, onClick}) => {
 };
 
 const renderSquare = (squares, setSquares, i) => {
-    let newSquares;
-    
     return <Square
         value={squares[i]}
         onClick={() => {
             console.log('squares=', squares);
             console.log('i=', i);
-            newSquares = squares.slice();
+            const newSquares = squares.slice();
             newSquares[i] = 'x';
             setSquares(newSquares);
         }}
