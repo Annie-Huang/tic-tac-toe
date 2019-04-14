@@ -2,10 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 
-const Square = (props) => {
+const Square = ({number}) => {
     return (
         <button className="square">
-            {props.number}
+            {number}
         </button>
     );
 };
