@@ -4,7 +4,10 @@ import './index.css';
 
 const Square = ({number}) => {
     return (
-        <button className="square">
+        <button
+            className="square"
+            onClick={() => console.log('happy birthday react hooks')}
+        >
             {number}
         </button>
     );
