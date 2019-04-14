@@ -2,16 +2,16 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 
-const Square = () => {
+const Square = (props) => {
     return (
         <button className="square">
-            {/* TODO */}
+            {props.number}
         </button>
     );
 };
 
 const renderSquare = (i) => {
-    return <Square />;
+    return <Square number={i}/>;
 };
 
 const Board = () => {
