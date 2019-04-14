@@ -19,6 +19,8 @@ const renderSquare = (i) => {
 };
 
 const Board = () => {
+    const [squares, setSquares] = useState(Array(9).fill(null));
+
     const status = 'Next player: X';
 
     return (
