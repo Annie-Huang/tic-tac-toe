@@ -9,7 +9,7 @@ const Square = ({number, squares}) => {
             className="square"
             onClick={() => setValue('x')}
         >
-            {value}
+            {squares[number]}
         </button>
     );
 };
