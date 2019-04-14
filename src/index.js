@@ -3,11 +3,11 @@ import ReactDOM from 'react-dom';
 import './index.css';
 
 const Square = ({number}) => {
-    const [value, setValue] = useState('x');
+    const [value, setValue] = useState('');
     return (
         <button
             className="square"
-            onClick={() => console.log('happy birthday react hooks')}
+            onClick={() => setValue('x')}
         >
             {value}
         </button>
