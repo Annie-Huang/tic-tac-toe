@@ -13,14 +13,15 @@ const Square = ({value, onClick}) => {
     );
 };
 
-const renderSquare = (squares, setSquares, i) => {
+const renderSquare = (squares, setSquares, isXNext, setXNext, i) => {
     return <Square
         value={squares[i]}
         onClick={() => {
             console.log('squares=', squares);
             console.log('i=', i);
             const newSquares = squares.slice();
-            newSquares[i] = 'x';
+            newSquares[i] = isXNext ? 'x' : 'o';
+            setXNext(!isXNext);
             setSquares(newSquares);
         }}
     />;
@@ -28,6 +29,7 @@ const renderSquare = (squares, setSquares, i) => {
 
 const Board = () => {
     const [squares, setSquares] = useState(Array(9).fill(null));
+    const [isXNext, setXNext] = useState(true);
 
     const status = 'Next player: X';
 
@@ -35,19 +37,19 @@ const Board = () => {
         <div>
             <div className="status">{status}</div>
             <div className="board-row">
-                {renderSquare(squares, setSquares, 0)}
-                {renderSquare(squares, setSquares, 1)}
-                {renderSquare(squares, setSquares,2)}
+                {renderSquare(squares, setSquares, isXNext, setXNext, 0)}
+                {renderSquare(squares, setSquares, isXNext, setXNext, 1)}
+                {renderSquare(squares, setSquares, isXNext, setXNext,  2)}
             </div>
             <div className="board-row">
-                {renderSquare(squares, setSquares,3)}
-                {renderSquare(squares, setSquares,4)}
-                {renderSquare(squares, setSquares,5)}
+                {renderSquare(squares, setSquares, isXNext, setXNext, 3)}
+                {renderSquare(squares, setSquares, isXNext, setXNext, 4)}
+                {renderSquare(squares, setSquares, isXNext, setXNext, 5)}
             </div>
             <div className="board-row">
-                {renderSquare(squares, setSquares,6)}
-                {renderSquare(squares, setSquares,7)}
-                {renderSquare(squares, setSquares,8)}
+                {renderSquare(squares, setSquares, isXNext, setXNext, 6)}
+                {renderSquare(squares, setSquares, isXNext, setXNext, 7)}
+                {renderSquare(squares, setSquares, isXNext, setXNext, 8)}
             </div>
         </div>
     );
