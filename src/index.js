@@ -17,6 +17,8 @@ const renderSquare = (squares, setSquares, i) => {
     return <Square
         value={squares[i]}
         onClick={() => {
+            console.log('squares=', squares);
+            console.log('i=', i);
             squares[i] = 'x';
             setSquares(squares);
         }}
