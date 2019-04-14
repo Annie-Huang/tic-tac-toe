@@ -2,3 +2,13 @@ Fun Fun Function - Trying React Hooks for the first time with Dan Abramov
 
 https://www.youtube.com/watch?v=G-aO5hzo1aw
 https://codepen.io/gaearon/pen/oWWQNa
+
+https://reactjs.org/tutorial/tutorial.html
+https://reactjs.org/tutorial/tutorial.html#passing-data-through-props
+
+
+https://codepen.io/gaearon/pen/gWWZgR?editors=0010
+
+Homework:
+Continue of the rest of the code from 'Declaring a Winner' in https://reactjs.org/tutorial/tutorial.html#passing-data-through-props
+And move everything into hooks.
