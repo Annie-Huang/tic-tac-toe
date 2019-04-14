@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 
-const Square = ({number}) => {
+const Square = ({number, squares}) => {
     const [value, setValue] = useState('');
     return (
         <button
@@ -14,8 +14,8 @@ const Square = ({number}) => {
     );
 };
 
-const renderSquare = (i) => {
-    return <Square number={i}/>;
+const renderSquare = (squares, i) => {
+    return <Square squares={squares} number={i}/>;
 };
 
 const Board = () => {
@@ -27,19 +27,19 @@ const Board = () => {
         <div>
             <div className="status">{status}</div>
             <div className="board-row">
-                {renderSquare(0)}
-                {renderSquare(1)}
-                {renderSquare(2)}
+                {renderSquare(squares, 0)}
+                {renderSquare(squares, 1)}
+                {renderSquare(squares,2)}
             </div>
             <div className="board-row">
-                {renderSquare(3)}
-                {renderSquare(4)}
-                {renderSquare(5)}
+                {renderSquare(squares,3)}
+                {renderSquare(squares,4)}
+                {renderSquare(squares,5)}
             </div>
             <div className="board-row">
-                {renderSquare(6)}
-                {renderSquare(7)}
-                {renderSquare(8)}
+                {renderSquare(squares,6)}
+                {renderSquare(squares,7)}
+                {renderSquare(squares,8)}
             </div>
         </div>
     );
